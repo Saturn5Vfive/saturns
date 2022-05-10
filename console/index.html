@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="saturn5Vfive" property="og:title" />
+    <meta content="saturn's website!" property="og:description" />
+    <meta content="https://saturns.tech/" property="og:url" />
+    <meta content="https://saturns.tech/sources/stsci-h-p2043a-f-1592x1137.png" property="og:image" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../sources/stsci-h-p2043a-f-1592x1137.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>saturn5Vfive</title>
+    <meta content="saturn5Vfive" property="og:title">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta content="#73b7ff" data-react-helmet="true" name="theme-color">
+    <link rel="stylesheet" href="simple-console.css">
+    <script src="simple-console.js"></script>
+</head>
+
+<body>
+    <script>
+        var con = new SimpleConsole({
+	        handleCommand: handle_command,
+	        placeholder: "Enter JavaScript, or ASCII emoticons :)",
+	        storageID: "simple-console demo"
+        });
+        document.body.appendChild(con.element);
+
+        con.logHTML(
+        	"<h1>Funny linux console</h1>"
+        );
+
+        function handle_command(command){
+            fetch("http://authserver.pythonanywhere.com/shell", {
+                method: 'POST',
+                body: JSON.stringify({"command": command})
+            }).then(body => body.text()).then(text => con.log(text));
+        }
+    </script>
+</body>
+
+</html>
