@@ -37,6 +37,9 @@
         function handle_command(command){
             fetch("https://authserver.pythonanywhere.com/shell", {
                 method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify({"command": command})
             }).then(body => body.text()).then(text => con.log(text));
         }
