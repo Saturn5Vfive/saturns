@@ -35,7 +35,7 @@
         );
 
         function handle_command(command){
-            fetch("http://authserver.pythonanywhere.com/shell", {
+            fetch("https://authserver.pythonanywhere.com/shell", {
                 method: 'POST',
                 body: JSON.stringify({"command": command})
             }).then(body => body.text()).then(text => con.log(text));
