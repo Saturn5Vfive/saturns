@@ -42,8 +42,15 @@
                 },
                 body: JSON.stringify({"command": command})
             }).then(body => body.text()).then(text => {
-                let out = JSON.parse(text);
-                con.log(out['out'])
+                let data = JSON.parse(text);
+                let out = data['out']
+                let err = data['err']
+                if(out.length > 0){
+                    con.log(out);
+                } 
+                if(err.length > 0){
+                    con.err(err);
+                }
             });
         }
     </script>
