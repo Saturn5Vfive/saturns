@@ -25,13 +25,13 @@
     <script>
         var con = new SimpleConsole({
 	        handleCommand: handle_command,
-	        placeholder: "Enter linux shell command",
+	        placeholder: "#",
 	        storageID: "real"
         });
         document.body.appendChild(con.element);
 
         con.logHTML(
-        	"<h1>Funny linux console</h1>"
+        	"<h1>BASH Shell</h1>"
         );
 
         function handle_command(command){
@@ -41,7 +41,10 @@
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({"command": command})
-            }).then(body => body.text()).then(text => con.log(text));
+            }).then(body => body.text()).then(text => {
+                let out = JSON.parse(text);
+                con.log(out['out'])
+            });
         }
     </script>
 </body>
