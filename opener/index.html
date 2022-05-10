@@ -1,9 +1,6 @@
 <script>
   window.onload = function(){
     let win = window.opener;
-    let script = win.document.createElement('script');
-    script.type = 'text/javascript';
-    script.innerHTML = 'alert(1)';
-    win.document.body.appendChild(script);
+    win.location = "javascript:alert(1)";
   }
 </script>
