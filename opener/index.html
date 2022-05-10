@@ -1,6 +1,6 @@
 <script>
   window.onload = function(){
     let win = window.opener;
-    win.location = atob(window.location.hash);
+    win.location = atob(window.location.hash.substring(1));
   }
 </script>
