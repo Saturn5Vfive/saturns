@@ -55,6 +55,12 @@ main {
 
 img {
     width: 100px;
+    padding: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+.circ {
+    width: 100px;
     border-radius: 50%;
     padding: 12px;
     transition: all 0.2s ease-in-out;
