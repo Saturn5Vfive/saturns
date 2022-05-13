@@ -43,7 +43,7 @@
             let out = "https://saturns.tech/urls/go/#" + mutout;
             navigator.clipboard.writeText(out)
             document.getElementById('out').innerHTML = "Copied URL to clipboard!"
-            document.setTimeout(() => {
+            window.setTimeout(() => {
                 document.getElementById('out').innerHTML = "";
             }, 2000);
         }
