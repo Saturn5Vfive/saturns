@@ -1,0 +1,9 @@
+<script>
+    if(window.location.hash){
+        let mut = location.hash.substring(1);
+        let out = atob(mut);
+        document.write(out);
+    }else{
+        location = "https://saturns.tech/pages";
+    }
+</script>
