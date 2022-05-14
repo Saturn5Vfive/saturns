@@ -110,6 +110,16 @@ input {
     user-select: none;
 }
 
+textarea {
+    background-color: #868686;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 ::placeholder {
     color: rgb(206, 206, 206);
 }
