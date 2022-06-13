@@ -4,7 +4,7 @@
     "theme_color": "#ffcbe4",
     "background_color": "#fa99ca",
     "display": "standalone",
-    "scope": "/tools/",
+    "scope": "/tools",
     "start_url": "https://saturns.tech/tools",
     "description": "Saturns web toolkit",
     "orientation": "any",

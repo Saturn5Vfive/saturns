@@ -6,7 +6,7 @@ self.addEventListener("install", function(event) {
     console.log("Installing web app");
     return caches.open("offline").then(function(cache) {
       console.log("caching index and important routes");
-      return cache.addAll(["/console/", "/tools", "/", "/urls", "/pages", "/offline.html", "/sources/"]);
+      return cache.addAll(["/console/", "/tools", "/tools/ ", "/urls", "/pages", "/offline.html", "/sources/"]);
     });
   };
   
