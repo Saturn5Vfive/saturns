@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../style.css" rel="stylesheet">
     <link href="../bg.css" rel="stylesheet">
-    <link rel="icon" href="sources/stsci-h-p2043a-f-1592x1137.png">
+    <link rel="icon" href="sources/saturn_lgo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
@@ -19,6 +19,7 @@
     <meta content="saturn5Vfive" property="og:title">
     <meta name="twitter:card" content="summary_large_image">
     <meta content="#73b7ff" data-react-helmet="true" name="theme-color">
+    <link rel="manifest" href="../sources/manifest.json">
 </head>
 
 <body>
@@ -40,5 +41,11 @@
         </div>
     </main>
 </body>
-
+<script>
+    if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function(reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+    }
+</script>
 </html>

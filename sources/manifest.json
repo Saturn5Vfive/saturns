@@ -1,0 +1,17 @@
+{
+    "name": "Saturns Toolkit",
+    "short_name": "tools",
+    "theme_color": "#ffcbe4",
+    "background_color": "#fa99ca",
+    "display": "standalone",
+    "scope": "/tools/",
+    "start_url": "https://saturns.tech/tools",
+    "description": "Saturns web toolkit",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://saturns.tech/sources/toolkit.png",
+            "sizes": "512x512"
+        }
+    ]
+}
