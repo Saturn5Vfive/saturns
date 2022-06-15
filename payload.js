@@ -253,10 +253,7 @@ async function jump_around(){
     }
 }
 
-addEventListener('beforeunload', event => { 
-    alert("no");
-});
-onbeforeunload = event => {alert("no"); };
+window.onbeforeunload = function() { return "no bitch"; }
 
 async function random_shit(){
     while(true){
