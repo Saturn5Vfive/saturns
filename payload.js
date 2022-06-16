@@ -2,9 +2,7 @@ const FBI_URLS = [
     "https://www.google.com/search?q=how+to+build+a+pipe+bomb",
     "https://www.google.com/search?q=how+to+get+drugs+easliy",
     "https://www.google.com/search?q=porn+free+access",
-    "https://www.google.com/search?q=download+porn+games",
-    "https://www.google.com/search?q=how+can+i+shoot+up+my+school",
-    "https://www.google.com/search?q=how+to+be+racist"
+    "https://www.google.com/search?q=download+porn+games"
 ]
 
 const FUNNY = [
